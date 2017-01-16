@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HCHomeViewController" customModule="HipChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yCg-Ki-FVl">
+                                <rect key="frame" x="47" y="28" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tGx-Su-Mnb"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGE-wQ-REC">
+                                <rect key="frame" x="47" y="73" width="280" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbm-Xb-ZCx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR0-TJ-J0J">
+                                <rect key="frame" x="47" y="118" width="280" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9dq-Ti-hXU"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6t-4D-zeO">
+                                <rect key="frame" x="47" y="199" width="280" height="369"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZL-km-OlF">
+                                <rect key="frame" x="47" y="163" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UZL-km-OlF" secondAttribute="trailing" constant="32" id="2yp-ZS-QcC"/>
+                            <constraint firstItem="FR0-TJ-J0J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="5tz-r9-VQH"/>
+                            <constraint firstItem="U6t-4D-zeO" firstAttribute="top" secondItem="UZL-km-OlF" secondAttribute="bottom" constant="15" id="8Kv-zd-TZi"/>
+                            <constraint firstItem="FR0-TJ-J0J" firstAttribute="top" secondItem="OGE-wQ-REC" secondAttribute="bottom" constant="15" id="8Vo-yV-5Lz"/>
+                            <constraint firstItem="U6t-4D-zeO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="DGq-Er-9A5"/>
+                            <constraint firstItem="UZL-km-OlF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="QpN-Pr-aI1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U6t-4D-zeO" secondAttribute="trailing" constant="32" id="QrS-yu-wAm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FR0-TJ-J0J" secondAttribute="trailing" constant="32" id="R8w-IQ-jRW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OGE-wQ-REC" secondAttribute="trailing" constant="32" id="S8e-aH-wFY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="U6t-4D-zeO" secondAttribute="bottom" constant="99" id="WKW-rF-VOU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yCg-Ki-FVl" secondAttribute="trailing" constant="32" id="cT9-hW-edg"/>
+                            <constraint firstItem="yCg-Ki-FVl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="dzT-fB-sHj"/>
+                            <constraint firstItem="OGE-wQ-REC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="ea6-K8-Xhg"/>
+                            <constraint firstItem="yCg-Ki-FVl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ffp-MQ-FAq"/>
+                            <constraint firstItem="OGE-wQ-REC" firstAttribute="top" secondItem="yCg-Ki-FVl" secondAttribute="bottom" constant="15" id="uza-Ld-85j"/>
+                            <constraint firstItem="UZL-km-OlF" firstAttribute="top" secondItem="FR0-TJ-J0J" secondAttribute="bottom" constant="15" id="yJ0-R6-Ng8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="yCg-Ki-FVl" id="05H-2T-Bdg"/>
+                        <outlet property="resetButton" destination="FR0-TJ-J0J" id="cUJ-PO-6GS"/>
+                        <outlet property="resultTextView" destination="U6t-4D-zeO" id="36Y-dw-0zI"/>
+                        <outlet property="submitButton" destination="OGE-wQ-REC" id="1Fd-yT-AcU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
